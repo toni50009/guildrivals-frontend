@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "classe": "Lutador",
+    "nome": "Ataque",
+    "descricao": "Causa 10 de dano",
+    "custo": 0,
+    "valor": 10,
+    "tipo": "DANO",
+    "imagem": "ataque.png"
+  },
+  {
+    "id": 2,
+    "classe": "Lutador",
+    "nome": "Estocada",
+    "descricao": "Causa 20 de dano",
+    "custo": 1,
+    "valor": 20,
+    "tipo": "DANO",
+    "imagem": "lanca.png"
+  },
+  {
+    "id": 3,
+    "classe": "Lutador",
+    "nome": "Finalizar",
+    "descricao": "Causa 50 de dano",
+    "custo": 3,
+    "valor": 50,
+    "tipo": "DANO",
+    "imagem": "finalizar.png"
+  },
+  {
+    "id": 4,
+    "classe": "Lutador",
+    "nome": "Cota de Malha",
+    "descricao": "Receba 20 de armadura",
+    "custo": 1,
+    "valor": 20,
+    "tipo": "ARMADURA",
+    "imagem": "cotademalhas.png"
+  },
+  {
+    "id": 5,
+    "classe": "Lutador",
+    "nome": "Blindar",
+    "descricao": "Receba 40 de armadura",
+    "custo": 3,
+    "valor": 40,
+    "tipo": "ARMADURA",
+    "imagem": "blindar.png"
+  },
+  {
+    "id": 6,
+    "classe": "Mago",
+    "nome": "Canalizar",
+    "descricao": "Receba +1 de mana",
+    "custo": 0,
+    "valor": 1,
+    "tipo": "CURAMANA",
+    "imagem": "canalisar.png"
+  },
+  {
+    "id": 7,
+    "classe": "Mago",
+    "nome": "Bola de Fogo",
+    "descricao": "Causa 30 de dano",
+    "custo": 2,
+    "valor": 30,
+    "tipo": "DANO",
+    "imagem": "boladefogo.png"
+  },
+  {
+    "id": 8,
+    "classe": "Mago",
+    "nome": "Meteoro",
+    "descricao": "Causa 80 de dano",
+    "custo": 4,
+    "valor": 80,
+    "tipo": "DANO",
+    "imagem": "meteoro.png"
+  },
+  {
+    "id": 9,
+    "classe": "Mago",
+    "nome": "Cura Menor",
+    "descricao": "Cura 20 de vida",
+    "valor": 20,
+    "custo": 1,
+    "tipo": "CURA",
+    "imagem": "curamenor.png"
+  },
+  {
+    "id": 10,
+    "classe": "Mago",
+    "nome": "Cura Maior",
+    "descricao": "Cura 50 de vida",
+    "custo": 3,
+    "valor": 50,
+    "tipo": "CURA",
+    "imagem": "curamaior.png"
+  },
+  {
+    "id": 11,
+    "classe": "Ladino",
+    "nome": "Kunai",
+    "descricao": "Causa 15 de dano",
+    "custo": 0,
+    "valor": 15,
+    "tipo": "DANO",
+    "imagem": "kunai.png"
+  },
+  {
+    "id": 12,
+    "classe": "Ladino",
+    "nome": "Shurikens",
+    "descricao": "Causa 25 de dano",
+    "custo": 2,
+    "valor": 25,
+    "tipo": "DANO",
+    "imagem": "shurikens.png"
+  },
+  {
+    "id": 13,
+    "classe": "Ladino",
+    "nome": "Backstab",
+    "descricao": "Causa 60 de dano",
+    "custo": 3,
+    "valor": 60,
+    "tipo": "DANO",
+    "imagem": "backstab.png"
+  },
+  {
+    "id": 14,
+    "classe": "Ladino",
+    "nome": "Armadura de Couro",
+    "descricao": "Receba 10 de armadura",
+    "custo": 1,
+    "valor": 10,
+    "tipo": "ARMADURA",
+    "imagem": "couro.png"
+  },
+  {
+    "id": 15,
+    "classe": "Ladino",
+    "nome": "Poção de Cura",
+    "descricao": "Cura 20 de Vida",
+    "custo": 2,
+    "valor": 20,
+    "tipo": "CURA",
+    "imagem": "pocao.png"
+  }
+]
