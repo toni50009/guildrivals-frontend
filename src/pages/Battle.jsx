@@ -88,10 +88,10 @@ export default function Battle() {
 
       if (alvo === "bot") {
         setVidaBot(novaVida);
-        setArmaduraBot((prev) => Math.max(prev - valor, 0));
+        setArmaduraBot((prev) => Math.max(prev - danoAbsorvido, 0));
       } else {
         setVidaPlayer(novaVida);
-        setArmaduraPlayer((prev) => Math.max(prev - valor, 0));
+        setArmaduraPlayer((prev) => Math.max(prev - danoAbsorvido, 0));
       }
 
       verificarFimDeJogo(novaVida, alvo);

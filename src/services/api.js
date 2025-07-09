@@ -6,7 +6,7 @@ function getCookie(name) {
 }
 
 const api = axios.create({
-  baseURL: "http://localhost:8000",
+  baseURL: "https://apiguildrivals.zanondev.com",
   withCredentials: true,
   headers: {
     "X-Requested-With": "XMLHttpRequest",
