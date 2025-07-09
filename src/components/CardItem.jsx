@@ -20,7 +20,7 @@ export default function CardItem({ carta, onClick, disabled }) {
         <img
           src={`${carta.imagem}`}
           alt={carta.nome}
-          className="img-fluid mb-1"
+          className="img-fluid mb-1 carta-imagem"
           style={{ height: "70px", width: "100%", objectFit: "contain" }}
         />
         <small className="fw-bold">{carta.nome}</small>
