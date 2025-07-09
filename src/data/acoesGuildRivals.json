@@ -7,7 +7,7 @@
     "custo": 0,
     "valor": 10,
     "tipo": "DANO",
-    "imagem": "ataque.png"
+    "imagem": "/imagens/ataque.png"
   },
   {
     "id": 2,
