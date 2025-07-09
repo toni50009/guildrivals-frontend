@@ -18,7 +18,7 @@ export default function CardItem({ carta, onClick, disabled }) {
     >
       <div className="card-body p-2 d-flex flex-column text-align-center justify-content-between">
         <img
-          src={`./src/assets/imagens/${carta.imagem}`}
+          src={`${carta.imagem}`}
           alt={carta.nome}
           className="img-fluid mb-1"
           style={{ height: "70px", width: "100%", objectFit: "contain" }}
