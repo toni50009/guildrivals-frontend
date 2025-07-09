@@ -17,7 +17,7 @@
     "custo": 1,
     "valor": 20,
     "tipo": "DANO",
-    "imagem": "lanca.png"
+    "imagem": "/imagens/lanca.png"
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
     "custo": 3,
     "valor": 50,
     "tipo": "DANO",
-    "imagem": "finalizar.png"
+    "imagem": "/imagens/finalizar.png"
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "custo": 1,
     "valor": 20,
     "tipo": "ARMADURA",
-    "imagem": "cotademalhas.png"
+    "imagem": "/imagens/cotademalhas.png"
   },
   {
     "id": 5,
@@ -47,7 +47,7 @@
     "custo": 3,
     "valor": 40,
     "tipo": "ARMADURA",
-    "imagem": "blindar.png"
+    "imagem": "/imagens/blindar.png"
   },
   {
     "id": 6,
@@ -57,7 +57,7 @@
     "custo": 0,
     "valor": 1,
     "tipo": "CURAMANA",
-    "imagem": "canalisar.png"
+    "imagem": "/imagens/canalisar.png"
   },
   {
     "id": 7,
@@ -67,7 +67,7 @@
     "custo": 2,
     "valor": 30,
     "tipo": "DANO",
-    "imagem": "boladefogo.png"
+    "imagem": "/imagens/boladefogo.png"
   },
   {
     "id": 8,
@@ -77,7 +77,7 @@
     "custo": 4,
     "valor": 80,
     "tipo": "DANO",
-    "imagem": "meteoro.png"
+    "imagem": "/imagens/meteoro.png"
   },
   {
     "id": 9,
@@ -87,7 +87,7 @@
     "valor": 20,
     "custo": 1,
     "tipo": "CURA",
-    "imagem": "curamenor.png"
+    "imagem": "/imagens/curamenor.png"
   },
   {
     "id": 10,
@@ -97,7 +97,7 @@
     "custo": 3,
     "valor": 50,
     "tipo": "CURA",
-    "imagem": "curamaior.png"
+    "imagem": "/imagens/curamaior.png"
   },
   {
     "id": 11,
@@ -107,7 +107,7 @@
     "custo": 0,
     "valor": 15,
     "tipo": "DANO",
-    "imagem": "kunai.png"
+    "imagem": "/imagens/kunai.png"
   },
   {
     "id": 12,
@@ -117,7 +117,7 @@
     "custo": 2,
     "valor": 25,
     "tipo": "DANO",
-    "imagem": "shurikens.png"
+    "imagem": "/imagens/shurikens.png"
   },
   {
     "id": 13,
@@ -127,7 +127,7 @@
     "custo": 3,
     "valor": 60,
     "tipo": "DANO",
-    "imagem": "backstab.png"
+    "imagem": "/imagens/backstab.png"
   },
   {
     "id": 14,
@@ -137,7 +137,7 @@
     "custo": 1,
     "valor": 10,
     "tipo": "ARMADURA",
-    "imagem": "couro.png"
+    "imagem": "/imagens/couro.png"
   },
   {
     "id": 15,
@@ -147,6 +147,6 @@
     "custo": 2,
     "valor": 20,
     "tipo": "CURA",
-    "imagem": "pocao.png"
+    "imagem": "/imagens/pocao.png"
   }
 ]
