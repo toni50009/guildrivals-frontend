@@ -97,15 +97,14 @@ export default function Battle() {
       verificarFimDeJogo(novaVida, alvo);
       if (novaVida <= 0) return;
     }
-
     if (tipo === "CURA") {
-      const novaVida =
-        alvo === "player"
-          ? Math.min(vidaPlayer + valor, 100)
-          : Math.min(vidaBot + valor, 100);
-
       adicionarLog(`Curou ${valor} de vida`);
-      alvo === "player" ? setVidaPlayer(novaVida) : setVidaBot(novaVida);
+
+      if (alvo === "player") {
+        setVidaPlayer((prev) => Math.min(prev + valor, 100));
+      } else {
+        setVidaBot((prev) => Math.min(prev + valor, 100));
+      }
     }
 
     if (tipo === "ARMADURA") {
