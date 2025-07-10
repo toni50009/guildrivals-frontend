@@ -147,6 +147,7 @@ export default function Battle() {
           ? "Você recuperou 1 de mana"
           : "O inimigo recuperou 1 de mana"
       );
+
       if (alvo === "player") {
         setManaPlayer((prev) => prev + 1);
       } else {
