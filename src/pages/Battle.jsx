@@ -67,11 +67,11 @@ export default function Battle() {
       setFimDeJogo(true);
     }
   };
-
   const aplicarEfeitoCarta = (carta, alvo) => {
     const tipo = carta.tipo;
     const valor = Number(carta.valor);
 
+    // Efeito: DANO
     if (tipo === "DANO") {
       if (alvo === "player") {
         setArmaduraPlayer((prevArmadura) => {
@@ -85,7 +85,7 @@ export default function Battle() {
                 ? `Causou ${danoRestante} de dano (absorvido ${danoAbsorvido} pela armadura)`
                 : `Causou ${danoRestante} de dano`
             );
-            verificarFimDeJogo(novaVida, alvo);
+            verificarFimDeJogo(novaVida, "player");
             return novaVida;
           });
 
@@ -100,10 +100,10 @@ export default function Battle() {
             const novaVida = Math.max(prevVida - danoRestante, 0);
             adicionarLog(
               danoAbsorvido > 0
-                ? `Causou ${danoRestante} de dano (absorvido ${danoAbsorvido} pela armadura)`
-                : `Causou ${danoRestante} de dano`
+                ? `Causou ${danoRestante} de dano ao inimigo (absorvido ${danoAbsorvido} pela armadura)`
+                : `Causou ${danoRestante} de dano ao inimigo`
             );
-            verificarFimDeJogo(novaVida, alvo);
+            verificarFimDeJogo(novaVida, "bot");
             return novaVida;
           });
 
@@ -112,23 +112,48 @@ export default function Battle() {
       }
     }
 
-    if (tipo === "ARMADURA") {
-      adicionarLog(`Recebeu ${valor} de armadura`);
-      alvo === "player"
-        ? setArmaduraPlayer((prev) => prev + valor)
-        : setArmaduraBot((prev) => prev + valor);
+    // Efeito: CURA
+    if (tipo === "CURA") {
+      adicionarLog(
+        alvo === "player"
+          ? `Você se curou em ${valor} de vida`
+          : `O inimigo se curou em ${valor} de vida`
+      );
+      if (alvo === "player") {
+        setVidaPlayer((prev) => Math.min(prev + valor, 100));
+      } else {
+        setVidaBot((prev) => Math.min(prev + valor, 100));
+      }
     }
 
+    // Efeito: ARMADURA
+    if (tipo === "ARMADURA") {
+      adicionarLog(
+        alvo === "player"
+          ? `Você recebeu ${valor} de armadura`
+          : `O inimigo recebeu ${valor} de armadura`
+      );
+      if (alvo === "player") {
+        setArmaduraPlayer((prev) => prev + valor);
+      } else {
+        setArmaduraBot((prev) => prev + valor);
+      }
+    }
+
+    // Efeito: CURAMANA
     if (tipo === "CURAMANA") {
       adicionarLog(
-        `${alvo === "player" ? "Você" : "O inimigo"} recuperou 1 de mana`
+        alvo === "player"
+          ? "Você recuperou 1 de mana"
+          : "O inimigo recuperou 1 de mana"
       );
-      alvo === "player"
-        ? setManaPlayer((prev) => prev + 1)
-        : setManaBot((prev) => prev + 1);
+      if (alvo === "player") {
+        setManaPlayer((prev) => prev + 1);
+      } else {
+        setManaBot((prev) => prev + 1);
+      }
     }
   };
-
   const passarTurno = () => {
     if (fimDeJogoRef.current) return;
 
