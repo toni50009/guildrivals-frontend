@@ -73,37 +73,42 @@ export default function Battle() {
     const valor = Number(carta.valor);
 
     if (tipo === "DANO") {
-      const armaduraAtual = alvo === "bot" ? armaduraBot : armaduraPlayer;
-      const vidaAtual = alvo === "bot" ? vidaBot : vidaPlayer;
-
-      const danoAbsorvido = Math.min(armaduraAtual, valor); // Quanto a armadura segurou
-      const danoRestante = Math.max(valor - armaduraAtual, 0); // Quanto foi para a vida
-      const novaVida = Math.max(vidaAtual - danoRestante, 0);
-
-      adicionarLog(
-        danoAbsorvido > 0
-          ? `Causou ${danoRestante} de dano (absorvido ${danoAbsorvido} pela armadura)`
-          : `Causou ${danoRestante} de dano`
-      );
-
-      if (alvo === "bot") {
-        setVidaBot(novaVida);
-        setArmaduraBot((prev) => Math.max(prev - danoAbsorvido, 0));
-      } else {
-        setVidaPlayer(novaVida);
-        setArmaduraPlayer((prev) => Math.max(prev - danoAbsorvido, 0));
-      }
-
-      verificarFimDeJogo(novaVida, alvo);
-      if (novaVida <= 0) return;
-    }
-    if (tipo === "CURA") {
-      adicionarLog(`Curou ${valor} de vida`);
-
       if (alvo === "player") {
-        setVidaPlayer((prev) => Math.min(prev + valor, 100));
+        setArmaduraPlayer((prevArmadura) => {
+          const danoAbsorvido = Math.min(prevArmadura, valor);
+          const danoRestante = Math.max(valor - prevArmadura, 0);
+
+          setVidaPlayer((prevVida) => {
+            const novaVida = Math.max(prevVida - danoRestante, 0);
+            adicionarLog(
+              danoAbsorvido > 0
+                ? `Causou ${danoRestante} de dano (absorvido ${danoAbsorvido} pela armadura)`
+                : `Causou ${danoRestante} de dano`
+            );
+            verificarFimDeJogo(novaVida, alvo);
+            return novaVida;
+          });
+
+          return Math.max(prevArmadura - danoAbsorvido, 0);
+        });
       } else {
-        setVidaBot((prev) => Math.min(prev + valor, 100));
+        setArmaduraBot((prevArmadura) => {
+          const danoAbsorvido = Math.min(prevArmadura, valor);
+          const danoRestante = Math.max(valor - prevArmadura, 0);
+
+          setVidaBot((prevVida) => {
+            const novaVida = Math.max(prevVida - danoRestante, 0);
+            adicionarLog(
+              danoAbsorvido > 0
+                ? `Causou ${danoRestante} de dano (absorvido ${danoAbsorvido} pela armadura)`
+                : `Causou ${danoRestante} de dano`
+            );
+            verificarFimDeJogo(novaVida, alvo);
+            return novaVida;
+          });
+
+          return Math.max(prevArmadura - danoAbsorvido, 0);
+        });
       }
     }
 
