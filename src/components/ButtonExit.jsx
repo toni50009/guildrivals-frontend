@@ -9,7 +9,7 @@ export default function ButtonExit() {
 
   return (
     <button
-      className="btn p-3 btn-danger position-absolute top-0 start-0 m-2"
+      className="btn p-1 btn-danger position-absolute top-0 start-0 m-2"
       onClick={fugirBatalha}
     >
       Sair
