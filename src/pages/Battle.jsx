@@ -268,10 +268,6 @@ export default function Battle() {
       }}
     >
       <div className="container-fluid vh-100 p-2 position-relative ">
-        <div className="position-relative">
-          {fimDeJogo ? <ButtonComplete /> : <ButtonExit />}
-        </div>
-
         {!classeSelecionada && (
           <div
             className="position-absolute top-0 start-0 w-100 vh-100 d-flex justify-content-center align-items-center"
@@ -307,6 +303,9 @@ export default function Battle() {
         )}
         <div className="d-flex w-100 h-100 justify-content-center align-items-center">
           <div className="wrapper w-auto">
+            <div className="position-relative">
+              {fimDeJogo ? <ButtonComplete /> : <ButtonExit />}
+            </div>
             <section className="mb-3 mt-5">
               <InfoPlayer
                 id="bot"
